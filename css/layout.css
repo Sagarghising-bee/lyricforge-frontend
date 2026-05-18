@@ -1,0 +1,72 @@
+/* App Shell */
+.top-nav {
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: var(--bg-base);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.top-nav .logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.top-nav .profile-btn {
+    background: var(--bg-surface);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Main scrollable area */
+#app-root {
+    margin-top: var(--nav-height);
+    height: calc(100vh - var(--nav-height) - var(--bottom-nav-height));
+    overflow-y: auto;
+    padding: 16px;
+    padding-bottom: 32px; /* Extra padding so last item isn't hidden */
+}
+
+/* Bottom App Navigation */
+.bottom-nav {
+    height: var(--bottom-nav-height);
+    background-color: var(--bg-base);
+    border-top: 1px solid var(--border-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.bottom-nav .nav-item {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bottom-nav .nav-item.active {
+    color: var(--text-primary);
+}
+
+.bottom-nav .nav-item .icon {
+    font-size: 24px;
+}

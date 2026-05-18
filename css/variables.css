@@ -1,0 +1,31 @@
+:root {
+    /* Colors */
+    --bg-base: #0f0f0f;
+    --bg-surface: #212121;
+    --bg-surface-hover: #3d3d3d;
+    --accent: #1DB954; /* Keeping your Spotify/Accent green! */
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --border-color: #3f3f3f;
+    
+    /* Spacing & Layout */
+    --nav-height: 60px;
+    --bottom-nav-height: 64px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-pill: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    -webkit-tap-highlight-color: transparent; /* Removes blue tap highlight on mobile */
+    overflow: hidden; /* We will scroll the app-root, not the whole body */
+}
